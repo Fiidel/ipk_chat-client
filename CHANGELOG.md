@@ -1,0 +1,3 @@
+- UDP confirmation and resend mechanism isn't implemented at all
+- MessageParsers presume correct message format from server, but can crash for incorrect or incomplete ones (eg. out of bounds exception)
+  - Not to be confused with unrecognized messages from server when the client sends an error message to server and exits (eg. receiving a "asdfg" message). What is meant is messages like "ERR" - the `ERR` message is missing other parts, namely "FROM {DisplayName} IS {MessageContent}"
